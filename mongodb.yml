@@ -7,7 +7,8 @@
         name: docker
         state: present
     - name: Start and enable dokeer daemon
-      service: docker
+      service:
+        name: docker
         state: started
         enabled: True
 

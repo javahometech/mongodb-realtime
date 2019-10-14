@@ -1,6 +1,10 @@
 ---
 - hosts: mongodb
   tasks:
+    - name: Install pip
+      yum:
+        name: python-pip
+        state: present
     - name: Install docker-py
       pip:
         name: docker-py

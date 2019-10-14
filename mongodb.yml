@@ -2,6 +2,6 @@
 - hosts: mongodb
   tasks:
     - name: Create mongodb container
-	  docker_container:
-		name: mongodb
-		image: mongo:latest
+      docker_container:
+        name: mongodb
+	image: mongo:latest

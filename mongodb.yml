@@ -1,6 +1,10 @@
 ---
 - hosts: mongodb
   tasks:
+    - name: Install docker-py
+      pip:
+        name: docker-py
+        state: present
     - name: Create mongodb container
       docker_container:
         name: mongodb

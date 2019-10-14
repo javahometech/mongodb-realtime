@@ -2,6 +2,15 @@
 - hosts: mongodb
   become: True
   tasks:
+    - name: Install docker daemon
+      yum:
+        name: docker
+        state: present
+    - name: Start and enable dokeer daemon
+        service: docker
+        state: started
+        enabled: True
+
     - name: Install pip
       yum:
         name: python-pip

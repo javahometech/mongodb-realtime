@@ -3,5 +3,5 @@
   tasks:
     - name: Create mongodb container
       docker_container:
-        name: mongodb
+      	name: mongodb
 	image: mongo:latest
